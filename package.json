@@ -1,5 +1,5 @@
 {
-  "name": "confluence-to-markdown",
+  "name": "confluence-to-markdown-ovos",
   "version": "1.1.2",
   "author": "Martin Lukes",
   "license": "MIT",
@@ -19,8 +19,7 @@
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
     "path": "^0.12.7",
-    "rimraf": "^2.5.4",
-    "sync-exec": "^0.6.2"
+    "rimraf": "^2.5.4"
   },
   "devDependencies": {
     "chai": "^3.5.0",

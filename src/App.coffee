@@ -17,7 +17,7 @@ class App
 
   ###*
   # @param {fs} _fs Required lib
-  # @param {sync-exec} _exec Required lib
+  # @param {child_process.execSync} _exec Required lib
   # @param {path} _path Required lib
   # @param {mkdirp} _mkdirp Required lib
   # @param {Utils} utils My lib
@@ -91,7 +91,7 @@ class App
       ' ' + tempInputFile
     out = @_exec command, cwd: fullOutDirName
     @logger.error out.stderr if out.status > 0
-    @_fs.unlink tempInputFile
+    @_fs.unlinkSync tempInputFile
 
 
   ###*
