@@ -15,6 +15,7 @@
   "dependencies": {
     "cheerio": "^0.22.0",
     "coffee-script": "^1.10.0",
+    "docsify-cli": "^4.2.1",
     "fs": "0.0.1-security",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
