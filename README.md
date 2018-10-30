@@ -17,6 +17,16 @@ Install all project dependencies:
 npm install
 ```
 
+or Docker
+
+```bash
+
+docker build -t ovos/converter .
+
+docker run --rm -it -w /app -v $PWD:/app ovos/converter your-archived-space.zip 
+
+```
+
 
 ## Usage
 
