@@ -4,15 +4,15 @@ class App
   @outputTypesAdd = [
     'markdown_github' # use GitHub markdown variant
     'blank_before_header' # insert blank line before header
-#    'mmd_link_attributes' # use MD syntax for images and links instead of HTML
-    'link_attributes' # use MD syntax for images and links instead of HTML
+    'link_attributes' # use MD syntax for images and links instead of HTML,
+    'pipe_tables',
   ]
 
   @outputTypesRemove = [
   ]
 
   @extraOptions = [
-    '--atx-headers' # Setext-style headers (underlined) | ATX-style headers (prefixed with hashes)
+    '--atx-headers', # Setext-style headers (underlined) | ATX-style headers (prefixed with hashes)
   ]
 
   ###*
@@ -90,6 +90,7 @@ class App
       ' -o ' + fullOutFileName +
       ' ' + tempInputFile
     out = @_exec command, cwd: fullOutDirName
+    @logger.info command
     @logger.error out.stderr if out.status > 0
     @_fs.unlinkSync tempInputFile
 
